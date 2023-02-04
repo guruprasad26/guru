@@ -1,0 +1,98 @@
+{
+	"name": "inputsqlfromblob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_lakestore",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "zoo.csv",
+				"folderPath": "prasad",
+				"fileSystem": "inputjan28"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "animal_name",
+				"type": "String"
+			},
+			{
+				"name": "hair",
+				"type": "String"
+			},
+			{
+				"name": "feathers",
+				"type": "String"
+			},
+			{
+				"name": "eggs",
+				"type": "String"
+			},
+			{
+				"name": "milk",
+				"type": "String"
+			},
+			{
+				"name": "airborne",
+				"type": "String"
+			},
+			{
+				"name": "aquatic",
+				"type": "String"
+			},
+			{
+				"name": "predator",
+				"type": "String"
+			},
+			{
+				"name": "toothed",
+				"type": "String"
+			},
+			{
+				"name": "backbone",
+				"type": "String"
+			},
+			{
+				"name": "breathes",
+				"type": "String"
+			},
+			{
+				"name": "venomous",
+				"type": "String"
+			},
+			{
+				"name": "fins",
+				"type": "String"
+			},
+			{
+				"name": "legs",
+				"type": "String"
+			},
+			{
+				"name": "tail",
+				"type": "String"
+			},
+			{
+				"name": "domestic",
+				"type": "String"
+			},
+			{
+				"name": "catsize",
+				"type": "String"
+			},
+			{
+				"name": "class_type",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

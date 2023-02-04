@@ -1,0 +1,280 @@
+{
+	"name": "sqlpipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "animal_name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "animal_name",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "hair",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "hair",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "feathers",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "feathers",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "eggs",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "eggs",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "milk",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "milk",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "airborne",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "airborne",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "aquatic",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "aquatic",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "predator",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "predator",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "toothed",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "toothed",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "backbone",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "backbone",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "breathes",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "breathes",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "venomous",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "venomous",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "fins",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "fins",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "legs",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "legs",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "tail",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "tail",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "domestic",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "domestic",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "catsize",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "catsize",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "class_type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "class_type",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "inputsqlfromblob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ouputsqlfromblob",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-01-30T06:41:31Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

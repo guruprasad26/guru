@@ -1,0 +1,106 @@
+{
+	"name": "ouputsqlfromblob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobtosql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "animal_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "hair",
+				"type": "nvarchar"
+			},
+			{
+				"name": "feathers",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "eggs",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "milk",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "airborne",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "aquatic",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "predator",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "toothed",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "backbone",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "breathes",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "venomous",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fins",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "legs",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "tail",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "domestic",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "catsize",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "class_type",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "zoo_data"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
